@@ -1,0 +1,45 @@
+<div class="allContainer" layout="column" layout-align="center center" layout-fill>
+  <md-content class="mainContainer">
+    <div class="thingToDoTitle">
+      <h1>{{ "Lista de tareas por hacer" | uppercase }}</h1>
+    </div>
+    <form class="form" ng-submit="main.addThingFunction()" layout="column" layout-align="center center">
+      <md-input-container>
+        <label>Add thing</label>
+        <input type="text" name="addThing" ng-model="main.addThing">
+      </md-input-container>
+      <md-button class="md-primary md-raised" type="submit">
+        <md-icon>assignment</md-icon>
+        Submit thing
+      </md-button>
+    </form>
+    <div class="thingsToDo">
+      <div class="thingToDo md-whiteframe-1dp" ng-repeat="thing in main.things track by $index" layout="row" layout-align="start center">
+        <p layout="row" layout-align="center center" flex="75">{{thing}}</p>
+        <div class="buttons" layout="row" layout-align="end center" flex="20">
+          <md-button class="md-icon-button" ng-click="main.completeThing($index)">
+            <md-icon>check</md-icon>
+          </md-button>
+        </div>  
+      </div>
+    </div>
+    
+    <div class="completeTitle" layout="row" layout-align="center center">
+      <h2>{{"Lista de tareas completadas" | uppercase}}</h2>
+    </div>
+
+    <div class="thingsCompleted">
+      <div class="thingCompleted md-whiteframe-1dp" ng-repeat="completed in main.completed track by $index" layout="row" layout-align="start center">
+        <p layout="row" layout-align="center center" flex="75">{{completed}}</p>
+        <div class="buttons" layout="row" layout-align="end center" flex="20">
+          <md-button class="md-icon-button" ng-click="main.deleteThing($index)">
+            <md-icon>deleted</md-icon>
+          </md-button>
+          <md-button class="md-icon-button" ng-click="main.makeItThing($index)">
+            <md-icon>assignment</md-icon>
+          </md-button>
+        </div>
+      </div>
+    </div>    
+  </md-content>
+</div>
