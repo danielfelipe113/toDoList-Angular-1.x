@@ -10,8 +10,8 @@
     var vm = this;
 
     vm.addThing = '';
-    vm.things = ['123', '321'];
-    vm.completed = ['456', '987'];
+    vm.things = ['Comprar leche', 'Pagar Netflix'];
+    vm.completed = ['Pagar el colegio', 'Comprar SOAT'];
 
     vm.addThingFunction = function () {
       if (vm.addThing) {

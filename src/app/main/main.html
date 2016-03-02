@@ -13,7 +13,7 @@
         Submit thing
       </md-button>
     </form>
-    <div class="thingsToDo">
+    <div class="thingsToDo content" flex="70">
       <div class="thingToDo md-whiteframe-1dp" ng-repeat="thing in main.things track by $index" layout="row" layout-align="start center">
         <p layout="row" layout-align="center center" flex="75">{{thing}}</p>
         <div class="buttons" layout="row" layout-align="end center" flex="20">
@@ -31,7 +31,7 @@
       <h2>{{"Lista de tareas completadas" | uppercase}}</h2>
     </div>
 
-    <div class="thingsCompleted">
+    <div class="thingsCompleted content" flex="70">
       <div class="thingCompleted md-whiteframe-1dp" ng-repeat="completed in main.completed track by $index" layout="row" layout-align="start center">
         <p layout="row" layout-align="center center" flex="75">{{completed}}</p>
         <div class="buttons" layout="row" layout-align="end center" flex="20">
