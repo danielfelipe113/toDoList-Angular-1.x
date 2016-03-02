@@ -1,11 +1,21 @@
 .allContainer
     color $COLOR_GRAY
+            
     &>.mainContainer
+        width 40%
+        max-width 40%
+        
+        &>.form 
+            &>md-input-container
+                width 40%
+                max-width 40%       
+        
         &>.thingToDoTitle
             color $COLOR_BLUE
         
         &>.thingsToDo
             &>.thingToDo
+                padding 0 0.5em
                 background-color $COLOR_BLUE_BRIGHTER
                 margin 1em 0
                 
@@ -22,6 +32,7 @@
 
         &>.thingsCompleted
             &>.thingCompleted
+                padding 0 0.5em
                 background-color $COLOR_BLUE_LIGHT
                 margin 1em 0
                 
