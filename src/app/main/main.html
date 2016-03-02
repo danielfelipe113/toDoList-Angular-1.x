@@ -18,6 +18,9 @@
         <p layout="row" layout-align="center center" flex="75">{{thing}}</p>
         <div class="buttons" layout="row" layout-align="end center" flex="20">
           <md-button class="md-icon-button" ng-click="main.completeThing($index)">
+            <md-tooltip md-direction="left" md-delay="0">
+              Completar tarea
+            </md-tooltip>
             <md-icon>check</md-icon>
           </md-button>
         </div>  
@@ -33,9 +36,15 @@
         <p layout="row" layout-align="center center" flex="75">{{completed}}</p>
         <div class="buttons" layout="row" layout-align="end center" flex="20">
           <md-button class="md-icon-button" ng-click="main.deleteThing($index)">
+            <md-tooltip md-direction="left" md-delay="0">
+              Eliminar tarea
+            </md-tooltip>
             <md-icon>deleted</md-icon>
           </md-button>
           <md-button class="md-icon-button" ng-click="main.makeItThing($index)">
+            <md-tooltip md-direction="left" md-delay="0">
+              Marcar como no completada
+            </md-tooltip>
             <md-icon>assignment</md-icon>
           </md-button>
         </div>
