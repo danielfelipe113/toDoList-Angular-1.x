@@ -5,14 +5,23 @@
         width 40%
         max-width 40%
         
+        @media screen and (max-width: $MEDIA_STEP_MD)
+            width 100%
+            max-width 100%
+            
         &>.form 
             &>md-input-container
                 width 40%
-                max-width 40%       
+                max-width 40%
+                
+                @media screen and (max-width: $MEDIA_STEP_MD)
+                    width 80%
+                    max-width 80%                
         
         &>.thingToDoTitle
             color $COLOR_BLUE
-        
+            text-align center
+            
         &>.thingsToDo
             &>.thingToDo
                 padding 0 0.5em
@@ -29,6 +38,7 @@
         
         &>.completeTitle
             color $COLOR_BLUE_LIGHT
+            text-align center
 
         &>.thingsCompleted
             &>.thingCompleted
